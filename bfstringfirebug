@@ -1,0 +1,72 @@
+include("https://code.jquery.com/jquery-1.11.1.min.js")
+include("https://cdn.opencpu.org/opencpu-0.4.js")
+  
+/set CORS to call "stocks" package on public server
+//ocpu.seturl("http://localhost:2715/ocpu/library/stats/R")
+         ocpu.seturl("https://public.opencpu.org/ocpu/github/anupamsingh81/BayesDienes/R")
+
+      // ocpu.seturl("http://localhost:2715/ocpu/library/BEST/R")
+    //   ocpu.seturl("http://localhost:2715/ocpu/library/myfirstpackage/R")
+         
+     //  ocpu.seturl("//anupamsingh81.ocpu.io/testpackage/R")
+	   
+	   
+		 var a = 3
+     var b = 3
+     var c = 0
+     
+     var d = 6
+     
+     var e =1
+     
+     var z 
+     
+     
+	
+	
+		
+			
+			
+
+
+
+      
+      ocpu.call("Bayes",{
+        sd : a,
+        obtained : b,
+        meanoftheory : c,
+		uniform : 0 ,
+        sdtheory : d,
+        tail :e 
+    }, function(session){
+      //retrieve session console (stdout) async
+      session.getConsole(function(outtxt){
+        
+         z = outtxt
+          
+      });
+    })
+      
+      typeof(z)
+      
+      z
+      
+      z.length
+
+      
+      
+
+
+z.search("Bayes Factor ")
+z.slice(243)
+
+z.search("1.28058822002154")
+
+z.slice(271)
+
+z.slice(-1)
+z.slice(-30)
+
+var h = z.slice(271)
+
+h.search("")
